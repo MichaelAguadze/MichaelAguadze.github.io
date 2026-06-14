@@ -285,6 +285,55 @@
             color: #334155;
         }
 
+        /* Projects */
+        .project-card {
+            display: grid;
+            gap: 10px;
+            padding: 24px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            text-decoration: none;
+            color: inherit;
+            transition: border-color 0.15s, box-shadow 0.15s;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 4px 16px rgba(37, 99, 235, 0.08);
+        }
+
+        .project-title {
+            font-weight: 600;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .project-title svg { color: var(--text-muted); flex-shrink: 0; }
+        .project-card:hover .project-title svg { color: var(--accent); }
+
+        .project-desc {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .project-tag {
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 100px;
+            background: var(--accent-light);
+            color: var(--accent);
+        }
+
         /* Publications */
         .pub-list { display: grid; gap: 12px; }
 
@@ -356,6 +405,7 @@
         <a href="#hero" class="nav-name">Michael Aguadze</a>
         <ul class="nav-links">
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#publications">Publications</a></li>
@@ -462,6 +512,24 @@
             </div>
 
         </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-label">Projects</div>
+        <a href="https://lwelburn.github.io/hexapodvla/" target="_blank" rel="noopener noreferrer" class="project-card">
+            <div class="project-title">
+                Hexapod VLA
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </div>
+            <div class="project-desc">
+                A vision-language-action model applied to hexapod robot locomotion, exploring how large multimodal models can drive low-level motor control for legged robots.
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Robotics</span>
+                <span class="project-tag">Vision-Language-Action</span>
+                <span class="project-tag">Locomotion</span>
+            </div>
+        </a>
     </section>
 
     <section id="education">
